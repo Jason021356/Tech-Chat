@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.ico"
+        type="image/x-icon">
+    <style>
+        @import url(background.css);
+
+        #Account {
+            color: white;
+            position: absolute;
+            top: 32.5%;
+            left: 40.25%;
+        }
+
+        h1 {
+            position: absolute;
+            top: 23.5%;
+            left: 47%;
+        }
+
+        #password {
+            color: white;
+            position: absolute;
+            top: 40%;
+            left: 40.25%;
+        }
+
+        span {
+            position: absolute;
+            top: 47.5%;
+            left: 45.5%;
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+
+        h3 {
+            color: azure;
+            position: absolute;
+            top: 55%;
+            left: 42.5%;
+        }
+
+        @keyframes animation {
+            0% {
+                background-color: red;
+                left: 32%;
+                top: 12%;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 55%;
+            }
+
+            50% {
+                background-color: green;
+                top: 60%;
+            }
+
+            75% {
+                background-color: blue;
+                left: 32%;
+            }
+
+            100% {
+                background-color: red;
+                left: 32%;
+                top: 12%;
+            }
+        }
+
+        @keyframes animation2 {
+            0% {
+                background-color: red;
+                left: 0%;
+            }
+
+            50% {
+                background-color: yellow;
+                left: 93%;
+            }
+
+            100% {
+                background-color: red;
+                left: 0%;
+            }
+        }
+
+        @keyframes animation3 {
+            0% {
+                background-color: yellow;
+                top: 0%;
+            }
+
+            50% {
+                background-color: green;
+                top: 87.5%;
+            }
+
+            100% {
+                background-color: yellow;
+                top: 0%;
+            }
+        }
+
+        @keyframes animation4 {
+            0% {
+                background-color: green;
+                left: 93%;
+            }
+
+            50% {
+                background-color: blue;
+                left: 0%;
+            }
+
+            100% {
+                background-color: green;
+                left: 93%;
+            }
+        }
+
+        @keyframes animation5 {
+            0% {
+                background-color: blue;
+                top: 87%;
+            }
+
+            50% {
+                background-color: red;
+                top: 0%;
+            }
+
+            100% {
+                background-color: blue;
+                top: 87%;
+            }
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 20px;
+            background-color: red;
+            position: absolute;
+            left: 32%;
+            top: 12%;
+            animation: animation 0.5s linear 0s infinite normal;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 20px;
+            background-color: red;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            animation: animation2 1s ease 0s infinite;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 20px;
+            background-color: yellow;
+            position: absolute;
+            left: 93%;
+            top: 0%;
+            animation: animation3 1s ease 0s infinite;
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 20px;
+            background-color: green;
+            position: absolute;
+            left: 93%;
+            top: 87%;
+            animation: animation4 1s ease 0s infinite;
+        }
+
+        .box5 {
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 20px;
+            background-color: blue;
+            position: absolute;
+            left: 0%;
+            top: 87%;
+            animation: animation5 1s ease 0s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <h1 style="background-color: rgba(0, 0, 0, 0.0);">登入</h1>
+    <form action="" method="post">
+        <p id="Account">帳號:<input type="email" name="Account"
+                style="color: gold;border-style: none none solid;border-bottom-width: 1px;border-bottom-color: gold;"
+                placeholder="請輸入帳號">
+        </p>
+        <p id="password">密碼:<input type="password" name="userpassword"
+                style="color: gold;border-style: none none solid;border-color: gold;border-bottom-width: 1px;"
+                placeholder="請輸入密碼"></p>
+        <span><input type="button" value="Login"
+                style="background-color: blue;border-radius: 10px;border-color: chartreuse;">
+            <input type="reset" value="Reset"
+                style="background-color: red;border-radius: 10px;border-color: chartreuse;"></span>
+    </form>
+    <h3 style="background-color: rgba(0, 0, 0, 0.0);">沒有帳號嗎?<a href="Register Account.html"
+            style="background-color: rgba(0, 0, 0, 0.0);">註冊帳號</a></h3>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>Animation</title>
+        <style>
+            @import url(background.css);
+            @keyframes animation {
+                0% {background-color: red; left: 0px;}
+                50% {background-color: blue; left: 1250px;}
+                100% {background-color: red; left: 0px;}
+            }
+            @keyframes animation2 {
+                form {background-color: red; top:0px;}
+                to {background-color: blue; top: 300px;}
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                border:none;
+                border-radius: 20px;
+                background-color: red;
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                animation: animation 1.5s linear 0s infinite normal ;
+            }
+            .box2{
+                width: 100px;
+                height: 100px;
+                border:none;
+                border-radius: 20px;
+                background-color: red;
+                position: absolute;
+                left: 400px;
+                animation: animation2 1s linear 0s infinite normal ;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <div class="box2"></div>
+    </body>
+</html>

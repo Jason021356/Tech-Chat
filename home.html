@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Chat</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.ico"
+        type="image/x-icon">
+    <style>
+        @import url(background.css);
+
+        li {
+            background-color: white;
+        }
+
+        #TechChatIcon {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            left: 0;
+        }
+
+        .dropdown {
+            position: fixed;
+            top: 50px;
+            left: 100px;
+        }
+
+        .dropdown-toggle {
+            width: 1000px !important;
+            background-color: red !important;
+            color: white !important;
+        }
+
+        #addfriendlink {
+            position: fixed;
+            left: 1100px;
+        }
+
+        #addfriendpicture {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 50px;
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+
+        #opinionpicture {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 50px;
+            left: 1150px;
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+
+        #settingpicture {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 50px;
+            left: 1200px;
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Tech Chat</h1>
+        </div>
+        <div data-role="content">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+            <img id="TechChatIcon" src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.png"
+                alt="Tech Chat image">
+            <div class="dropdown">
+                <button type="button" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    主頁
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="./home.html">主頁</a></li>
+                    <li><a class="dropdown-item" href="">聊天</a></li>
+                    <li><a class="dropdown-item" href="">限動</a></li>
+                    <li><a class="dropdown-item" href="">新聞</a></li>
+                    <li><a class="dropdown-item" href="">更多</a></li>
+                </ul>
+            </div>
+        </div>
+        <a id="addfriendlink" href=""><img id="addfriendpicture"
+                src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/add%20friend.png"></a>
+        <a id="opinionlink" href="/Opinion.html"><img id="opinionpicture"
+                src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/Opinion.png" alt="opinionpicture"></a>
+        <a id="settinglink" href="./setting.html" data-ajax="false"><img id="settingpicture"
+                src="https://github.com/Jason021356/Tech-Chat/blob/main/setting_icon.png?raw=true"
+                alt="settingpicture"></a>
+    </div>
+</body>
+
+</html>

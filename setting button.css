@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+#accountset,
+#personaldata,
+#privacyset,
+#techdrive,
+#backgroundset {
+    width: 98%;
+    height: 30px;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+}
+
+#accountset:hover,
+#personaldata:hover,
+#privacyset:hover,
+#techdrive:hover {
+    color: white;
+    background-color: red;
+}
+
+#backgroundset:hover {
+    color: white;
+    background-color: yellow;
+}
+
+#phonesettelinput {
+    border-bottom-width: 2px;
+    border-color: gold;
+}

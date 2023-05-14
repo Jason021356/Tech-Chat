@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Chat</title>
+    <style>
+        @import url(background.css);
+
+        .testbox {
+            width: 50%;
+            height: 10px;
+            background-color: red;
+            border-radius: 10px;
+            position: absolute;
+            animation: testanimation1 0.6s ease 0s infinite;
+        }
+
+        @keyframes testanimation1 {
+            0% {
+                width: 0;
+                left: 0;
+            }
+
+            50% {
+                width: 100%;
+                left: 0;
+            }
+
+            100% {
+                left: 100%;
+                width: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testbox"></div>
+</body>
+
+</html>
