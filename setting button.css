@@ -7,7 +7,9 @@
 #backgroundset,
 #picture,
 #homepagerecommended,
-#chatroombackgroundsettings {
+#chatroombackgroundsettings,
+#submit2,
+#sendresetphonenumber {
     width: 98%;
     height: 30px;
     border-radius: 30px;
@@ -33,4 +35,10 @@
 #phonesettelinput {
     border-bottom-width: 2px;
     border-color: gold;
+}
+
+#sendresetphonenumber:hover,
+#submit2:hover {
+    color: #ffffff;
+    background-color: green;
 }
