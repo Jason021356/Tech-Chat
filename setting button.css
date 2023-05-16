@@ -6,7 +6,8 @@
 #techdrive,
 #backgroundset,
 #picture,
-#homepagerecommended {
+#homepagerecommended,
+#chatroombackgroundsettings {
     width: 98%;
     height: 30px;
     border-radius: 30px;
@@ -23,7 +24,8 @@
 
 #backgroundset:hover,
 #picture:hover,
-#homepagerecommended:hover {
+#homepagerecommended:hover,
+#chatroombackgroundsettings:hover {
     color: white;
     background-color: yellow;
 }
