@@ -1,94 +1,178 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8">
-        <title>註冊帳號</title>
-        <link rel="icon" href="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.ico" type="image/x-icon">
-        <style>
-            @import url(background.css);
-            p{
-                color: azure;
-                position: absolute;
-                top: 32.5%;
-                left: 35%;
-            }
-            h1{
-                position: absolute;
-                top: 23%;
-                left: 46%;
-            }
-            span{
-                position: absolute;
-                top: 40%;
-                left: 46%;
-                background-color: rgba(0, 0, 0, 0.0);
-            }
-            #Loginweb{
-                color: white;
-                position:absolute;
-                top: 50%;
-                left: 45%;
-                background-color: rgba(0, 0, 0, 0.0);
-            }
-            @keyframes animation7 {
-                0%{width: 1px;height: 1px;}
-                50%{width: 300px;height: 300px;}
-                100%{width: 1px;height: 1px;}
-            }
-            .box7{
+
+<head>
+    <meta charset="UTF-8">
+    <title>註冊帳號</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.ico"
+        type="image/x-icon">
+    <style>
+        @import url(background.css);
+
+        p {
+            color: azure;
+            position: absolute;
+            top: 32.5%;
+            left: 35%;
+        }
+
+        h1 {
+            position: absolute;
+            top: 23%;
+            left: 46%;
+        }
+
+        span {
+            position: absolute;
+            top: 45%;
+            left: 46%;
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+
+        #Loginweb {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+
+        @keyframes animation7 {
+            0% {
                 width: 1px;
                 height: 1px;
-                background-color: black;
-                border-style: solid;
-                border-width: 20px;
-                border-color: white;
-                position: absolute;
-                top: 35%;
-                left: 37%;
-                animation: animation7 2s ease infinite;
             }
-            @keyframes animation8{
-                0%{background-color: red;top: 0%;left: 0%;}
-                50%{background-color: blue;top: 100%;left: 100%;}
-                100%{background-color: red;top: 0%;left: 0%;}
+
+            50% {
+                width: 300px;
+                height: 300px;
             }
-            .box8{
-                width: 100px;
-                height: 100px;
+
+            100% {
+                width: 1px;
+                height: 1px;
+            }
+        }
+
+        @keyframes animation8 {
+            0% {
                 background-color: red;
-                border-radius: 50%;
-                position: fixed;
                 top: 0%;
                 left: 0%;
-                animation: animation8 1.5s ease infinite;
             }
-            .box9{
-                width: 100px;
-                height: 100px;
-                background-color: yellow;
-                border-radius: 50%;
-                position: fixed;
-                right: 0%;
+
+            50% {
+                background-color: blue;
+                top: 100%;
+                left: 100%;
+            }
+
+            100% {
+                background-color: red;
                 top: 0%;
-                animation: animation9 2s ease infinite;
+                left: 0%;
             }
-            @keyframes animation9 {
-                0%{background-color: yellow;top: 0;right: 0;}
-                50%{background-color: green;top: 100%;right: 100%;}
-                100%{background-color: yellow;top: 0;right: 0;}
+        }
+
+        .box8 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            animation: animation8 1s ease infinite;
+        }
+
+        .box9 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: fixed;
+            right: 0%;
+            top: 0%;
+            animation: animation9 1s ease infinite;
+        }
+
+        @keyframes animation9 {
+            0% {
+                background-color: yellow;
+                top: 0;
+                right: 0;
             }
-        </style>
-    </head>
-    <body>
-        <div class="box7"></div>
-        <h1>註冊帳號</h1>
-        <form action="http://localhost/register_account_loader.php" method="post">
-            <p id="Accountset">帳號:<input type="text" name="Account" size="40" style="color: gold;border-style: none none solid;border-color: gold;border-bottom-width: 1px;">@blacktechnology.com</p>
-            <span><button onclick="loacation.href='passwordset.html'" style="background-color: blue;border-radius: 10px;border-color: chartreuse;">Next Step</button>
-            <input type="reset" value="Reset" style="background-color: red;border-radius: 10px;border-color: chartreuse;"></span>
-        </form>
-        <h3 id="Loginweb">已經有帳號了嗎?<a style="background-color: rgba(0, 0, 0, 0.0);" href="Login.html">登入</a></h3>
-        <div class="box8"></div>
-        <div class="box9"></div>
-    </body>
+
+            50% {
+                background-color: green;
+                top: 100%;
+                right: 100%;
+            }
+
+            100% {
+                background-color: yellow;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        #passwordset {
+            position: absolute;
+            top: 40%;
+        }
+
+        #password_block {
+            width: 110px;
+            height: 20px;
+            position: absolute;
+            top: 42%;
+            left: 52%;
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            border-color: green;
+            border-width: 2px;
+            transition-duration: 0.4s;
+        }
+
+        #password_block:hover {
+            color: white;
+            background-color: green;
+        }
+    </style>
+    <script>
+        function ok() {
+            let pass = document.getElementById("passwordsetinput");
+            let word = pass.getAttribute('type');
+            console.log(word);
+            if (word == 'password') {
+                pass.setAttribute('type', 'text');
+            } else {
+                pass.setAttribute('type', 'password');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <h1>註冊帳號</h1>
+    <form action="http://localhost/register_account_loader.php" method="post">
+        <p id="Accountset">帳號:<input type="text" name="Account" size="40"
+                style="color: gold;border-style: none none solid;border-color: gold;border-bottom-width: 1px;"
+                placeholder="請輸入您要建立的電子郵件帳號">@blacktechnology.com
+        </p>
+        <p id="passwordset">密碼:<input id="passwordsetinput" type="password" name="passwordset" size="24"
+                style="color: gold;border-style: none none solid;border-color: gold;border-bottom-width: 1px;"
+                placeholder="請輸入新密碼"></button></p>
+        <span><input type="submit" style="background-color: blue;border-radius: 10px;border-color: chartreuse;"
+                value="Next Step">
+            <input type="reset" value="Reset"
+                style="background-color: red;border-radius: 10px;border-color: chartreuse;"></span>
+    </form>
+    <button id="password_block" onclick="ok()">密碼顯示與隱藏</button>
+    <h3 id="Loginweb">已經有帳號了嗎?<a style="background-color: rgba(0, 0, 0, 0.0);" href="Login.html">登入</a></h3>
+</body>
+
 </html>

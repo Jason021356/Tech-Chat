@@ -199,7 +199,36 @@
             top: 87%;
             animation: animation5 1s ease 0s infinite;
         }
+
+        #password_block_button {
+            width: 110px;
+            height: 20px;
+            position: absolute;
+            top: 42%;
+            left: 55%;
+            background-color: white;
+            border-radius: 10px;
+            border-width: 2px;
+            border-color: green;
+            transition-duration: 0.4s;
+        }
+
+        #password_block_button:hover {
+            background-color: green;
+            color: white;
+        }
     </style>
+    <script>
+        function ok2() {
+            let pass = document.getElementById("userpassword");
+            let word = pass.getAttribute('type');
+            if (word == 'password') {
+                pass.setAttribute('type', 'text');
+            } else {
+                pass.setAttribute('type', 'password');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -214,7 +243,7 @@
                 style="color: gold;border-style: none none solid;border-bottom-width: 1px;border-bottom-color: gold;"
                 placeholder="請輸入帳號">
         </p>
-        <p id="password">密碼:<input type="password" name="userpassword"
+        <p id="password">密碼:<input id="userpassword" type="password" name="userpassword"
                 style="color: gold;border-style: none none solid;border-color: gold;border-bottom-width: 1px;"
                 placeholder="請輸入密碼"></p>
         <span><input type="button" value="Login"
@@ -224,6 +253,7 @@
     </form>
     <h3 style="background-color: rgba(0, 0, 0, 0.0);">沒有帳號嗎?<a href="Register Account.html"
             style="background-color: rgba(0, 0, 0, 0.0);">註冊帳號</a></h3>
+    <button id="password_block_button" onclick="ok2()">密碼顯示與隱藏</button>
 </body>
 
 </html>
