@@ -5,7 +5,8 @@
 #privacyset,
 #techdrive,
 #backgroundset,
-#picture {
+#picture,
+#homepagerecommended {
     width: 98%;
     height: 30px;
     border-radius: 30px;
@@ -20,7 +21,9 @@
     background-color: red;
 }
 
-#backgroundset:hover {
+#backgroundset:hover,
+#picture:hover,
+#homepagerecommended:hover {
     color: white;
     background-color: yellow;
 }
