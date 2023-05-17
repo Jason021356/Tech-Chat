@@ -1,30 +1,79 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8">
-        <title>Roadster Game</title>
-        <style>
-            @import url(background.css);
-            img{
-                width: 200px;
-                height: 479px;
-                position: absolute;
-                top: 100px;
-                left: 800px;
-                background-color: rgba(0, 0, 0, 0.0);
+
+<head>
+    <meta charset="UTF-8">
+    <title>Roadster Game</title>
+    <style>
+        @import url(background.css);
+
+        img {
+            width: 200px;
+            height: 479px;
+            position: absolute;
+            top: 100px;
+            left: 800px;
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+
+        #road {
+            width: 600px;
+            height: 100%;
+            background-color: grey;
+            position: absolute;
+            top: 0;
+            left: 400px;
+        }
+
+        :root {
+            --gap: 0px;
+            --duration: 2s;
+            --scroll-start: 0;
+            --scroll-end: calc(-100% - var(--gap));
+        }
+
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            gap: var(--gap);
+            flex-direction: column;
+        }
+
+        .marquee--group {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: var(--gap);
+            flex-direction: column;
+            animation: scroll-y var(--duration) linear infinite;
+        }
+
+        @keyframes scroll-y {
+            from {
+                transform: translateY(var(--scroll-start));
             }
-            #road{
-                width: 600px;
-                height: 100%;
-                background-color: grey;
-                position: absolute;
-                top: 0;
-                left: 400px;
+
+            to {
+                transform: translateY(var(--scroll-end));
             }
-        </style>
-    </head>
-    <body>
-        <div id="road"></div>
-        <img src="./可愛的Tesla Roadster(html用).png" alt="可愛的Tesla Roadster">
-    </body>
+        }
+    </style>
+</head>
+
+<body>
+    <div id="road">
+        <div id="roadpicture">
+            <img src="./road.png" alt="可愛的Tesla Roadster">
+            <img src="./road.png" alt="可愛的Tesla Roadster">
+            <img src="./road.png" alt="可愛的Tesla Roadster">
+        </div>
+        <div id="roadsterpicture" aria-hidden="true">
+            <img src="./road.png" alt="可愛的Tesla Roadster">
+            <img src="./road.png" alt="可愛的Tesla Roadster">
+            <img src="./road.png" alt="可愛的Tesla Roadster">
+        </div>
+    </div>
+</body>
+
 </html>
