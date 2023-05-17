@@ -76,6 +76,8 @@
             position: fixed;
             top: 50px;
             left: 100px;
+            background-color: white;
+            width: 150px;
         }
     </style>
 </head>
@@ -100,7 +102,7 @@
             <a href="./home.html" data-ajax="false"><img
                     src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.png"
                     alt="Tech Chat icon" style="width: 100px;height: 100px;position: fixed;top: 50px;left: 0;"></a>
-            <input type="text" name="settingssearch" id="settingssearch">
+            <input type="text" name="settingssearch" id="settingssearch" placeholder="搜尋設定項目...">
         </div>
     </div>
     <div data-role="page" id="accountsetpage">
@@ -135,8 +137,8 @@
         <div data-role="content">
             <h1 id="phonesetlabel">電話綁定</h1>
             <form action="" method="post">
-                <label for="#phonesettelinput">請填入您的電話:</label><input id="phonesettelinput" name="phonesettelinput"
-                    type="tel" placeholder="電話">
+                <label for="#phonesettelinput" style="color: white;">請填入您的電話:</label><input id="phonesettelinput"
+                    name="phonesettelinput" type="tel" placeholder="電話">
                 <a id="sendresetphonenumber" data-role="button">Send</a>
             </form>
         </div>
