@@ -56,6 +56,7 @@
             position: relative;
             color: white;
         }
+
         #picture {
             position: relative;
             top: 50px;
@@ -65,9 +66,16 @@
             position: relative;
             top: 50px;
         }
-        #chatroombackgroundsettings{
+
+        #chatroombackgroundsettings {
             position: relative;
             top: 50px;
+        }
+
+        #settingssearch {
+            position: fixed;
+            top: 50px;
+            left: 100px;
         }
     </style>
 </head>
@@ -92,6 +100,7 @@
             <a href="./home.html" data-ajax="false"><img
                     src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.png"
                     alt="Tech Chat icon" style="width: 100px;height: 100px;position: fixed;top: 50px;left: 0;"></a>
+            <input type="text" name="settingssearch" id="settingssearch">
         </div>
     </div>
     <div data-role="page" id="accountsetpage">
@@ -126,7 +135,8 @@
         <div data-role="content">
             <h1 id="phonesetlabel">電話綁定</h1>
             <form action="" method="post">
-                <label for="#phonesettelinput">請填入您的電話:</label><input id="phonesettelinput" name="phonesettelinput" type="tel" placeholder="電話">
+                <label for="#phonesettelinput">請填入您的電話:</label><input id="phonesettelinput" name="phonesettelinput"
+                    type="tel" placeholder="電話">
                 <a id="sendresetphonenumber" data-role="button">Send</a>
             </form>
         </div>
@@ -138,11 +148,14 @@
             <h1>Tech Chat</h1>
         </div>
         <div data-role="content">
-            <h1>密碼重設</h1><br/>
+            <h1>密碼重設</h1><br />
             <form action="" method="post">
-                <label for="passwordsetop" style="color: white;">Old password</label><input id="passwordsetop" name="passwordsetop" type="password" placeholder="Old passowrd">
-                <label for="passwordsetnp" style="color: white;">New password</label><input type="password" name="passwordsetnp" id="passwordsetnp" placeholder="New password">
-                <label for="passwordsetcnp" style="color: white;">Confirm new password</label><input type="password" name="passwordsetcnp" id="passwordsetcnp" placeholder="Confirm new password">
+                <label for="passwordsetop" style="color: white;">Old password</label><input id="passwordsetop"
+                    name="passwordsetop" type="password" placeholder="Old passowrd">
+                <label for="passwordsetnp" style="color: white;">New password</label><input type="password"
+                    name="passwordsetnp" id="passwordsetnp" placeholder="New password">
+                <label for="passwordsetcnp" style="color: white;">Confirm new password</label><input type="password"
+                    name="passwordsetcnp" id="passwordsetcnp" placeholder="Confirm new password">
                 <a id="submit2" href="" data-role="button">Send</a>
             </form>
         </div>
