@@ -16,53 +16,33 @@
             background-color: rgba(0, 0, 0, 0.0);
         }
 
-        :root {
-            --gap: 0px;
-            --duration: 2s;
-            --scroll-start: 0;
-            --scroll-end: calc(-100% - var(--gap));
-        }
-
-        .marquee {
-            display: flex;
+        .marquee div {
+            display: block;
+            width: 600px;
+            height: 100%;
+            position: relative;
             overflow: hidden;
-            gap: var(--gap);
-            flex-direction: column;
+            animation: marquee 1s linear infinite;
         }
 
-        .marquee--group {
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            gap: var(--gap);
-            flex-direction: column;
-            animation: scroll-y var(--duration) linear infinite;
-        }
-
-        @keyframes scroll-y {
+        @keyframes marquee {
             from {
-                transform: translateY(var(--scroll-start));
+                top: 0%;
             }
 
             to {
-                transform: translateY(var(--scroll-end));
+                top: 100%;
             }
         }
     </style>
 </head>
 
 <body>
-    <div id="road">
+    <div id="road" style="overflow: hidden;">
         <div id="roadpicture">
-            <img src="./road.png" alt="可愛的Tesla Roadster">
-            <img src="./road.png" alt="可愛的Tesla Roadster">
-            <img src="./road.png" alt="可愛的Tesla Roadster">
-        </div>
-        <div id="roadsterpicture" aria-hidden="true">
-            <img src="./road.png" alt="可愛的Tesla Roadster">
-            <img src="./road.png" alt="可愛的Tesla Roadster">
-            <img src="./road.png" alt="可愛的Tesla Roadster">
+            <div>
+                <img src=".\road.png" alt="roadpicturepng">
+            </div>
         </div>
     </div>
 </body>
