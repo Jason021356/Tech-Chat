@@ -73,12 +73,17 @@
             height: 300px;
             border-radius: 50%;
         }
+        #btnfordiv{
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
     </style>
 </head>
 
 <body>
     <div data-role="page">
-        <div data-role="header">
+        <div data-role="header" data-theme="b" data-position="fixed">
             <h1>Tech Chat</h1>
         </div>
         <div data-role="content">
@@ -108,7 +113,7 @@
         <a id="settinglink" href="./setting.html"><img id="settingpicture"
                 src="https://github.com/Jason021356/Tech-Chat/blob/main/setting_icon.png?raw=true"
                 alt="settingpicture"></a>
-        <a data-role="button" data-icon="arrow-b" data-iconpos="notext"></a>
+        <a id="btnfordiv" data-role="button" data-icon="arrow-b" data-iconpos="notext"></a>
     </div>
 </body>
 
