@@ -37,9 +37,8 @@
             color: white !important;
         }
 
-        #addfriendlink {
+        #addfriendlink,#opinionlink,#settinglink {
             position: fixed;
-            left: 1100px;
         }
 
         #addfriendpicture {
@@ -47,6 +46,7 @@
             height: 50px;
             position: fixed;
             top: 50px;
+            left: 1100px;
             background-color: rgba(0, 0, 0, 0.0);
         }
 
@@ -64,7 +64,7 @@
             height: 50px;
             position: fixed;
             top: 50px;
-            left: 100%;
+            left: 1210px;
             background-color: rgba(0, 0, 0, 0.0);
         }
 
@@ -74,7 +74,7 @@
             border-radius: 50%;
         }
         #btnfordiv{
-            position: absolute;
+            position: fixed;
             bottom: 100%;
             left: 0;
         }
@@ -82,7 +82,7 @@
 </head>
 
 <body>
-    <div data-role="page">
+    <div data-role="page" id="homepage">
         <div data--role="header" data-theme="b" data-position="fixed">
             <h1>Tech Chat</h1>
         </div>
@@ -105,7 +105,6 @@
                     <li><a class="dropdown-item" href="">更多</a></li>
                 </ul>
             </div>
-            <a id="btnfordiv" data-role="button" data-icon="arrow-b" data-iconpos="notext" data-theme="b"></a>
         </div>
         <a id="addfriendlink" href=""><img id="addfriendpicture"
                 src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/add%20friend.png"></a>
@@ -114,6 +113,7 @@
         <a id="settinglink" href="./setting.html"><img id="settingpicture"
                 src="https://github.com/Jason021356/Tech-Chat/blob/main/setting_icon.png?raw=true"
                 alt="settingpicture"></a>
+                <a id="btnfordiv" data-role="button" data-icon="arrow-b" data-iconpos="notext" data-theme="b">btn</a>
     </div>
 </body>
 
