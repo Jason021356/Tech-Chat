@@ -2,64 +2,56 @@
 <html lang="zh">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Tech Game</title>
-  <link rel="stylesheet" href="https://htmlpreview.github.io/?https://github.com/Jason021356/Tech-Chat/blob/main/gamepkg.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech Game</title>
+    <style>
+        body,
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
-  <div></div>
-  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://htmlpreview.github.io/?https://github.com/Jason021356/Tech-Chat/blob/main/three.module.min.js",
-      "three/addons/": "https://github.com/mrdoob/three.js/tree/master/examples/jsm"
-    }
-  }
-  </script>
-  <script type="module">
-    import * as THREE from 'three';
+    <canvas id="renderCanvas"></canvas>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://preview.babylonjs.com/loaders/babylon.glTF2FileLoader.js"></script>
+    <script>
+        var canvas = document.getElementById("renderCanvas")
+        var engine = new BABYLON.Engine(canvas, true);
 
-    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+        var createScene = function () {
+            var scene = new BABYLON.Scene(engine);
+            const alpha = Math.PI / 4;
+            const beta = Math.PI / 3;
+            const radius = 8;
+            const target = new BABYLON.Vector3(0, 0, 0);
 
-    let camera, scene, renderer;
+            const camera = new BABYLON.ArcRotateCamera("Camera", alpha, beta, radius, target, scene);
+            camera.attachControl(canvas, true);
 
-    init();
-    render();
+            BABYLON.SceneLoader.ImportMesh("", "", "lightbomb.glb", scene, function (newMesh) {
+                var mesh = newMesh[0];
+                mesh.position = new BABYLON.Vector3(0, 10, 0);
+            });
 
-    function init() {
-      const container = document.craeateElement('div');
-      document.body.appendChild(container);
-
-      camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.25, 20);
-      camera.position.set(-1.8, 0.6, 2.7);
-
-      scene = new THREE.Scene();
-
-      const loader = new GLTFLoader();
-
-      loader.load(
-        'tire.glb',
-        function (gltf) {
-
-          scene.add(gltf.scene);
-
-          gltf.animations;
-          gltf.scene;
-          gltf.scenes;
-          gltf.cameras;
-          gltf.asset;
-        },
-        function (xhr) {
-          console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-        },
-        function (error) {
-          console.log('錯誤!無法執行!');
+            return scene;
         }
-      )
-    }
-  </script>
-  <canvas width="885" height="789" style="width: 885px;height: 789px;">
+
+        engine.runRenderLoop(function () {
+            scene.render();
+        })
+
+        window.addEventListener("resize", function () {
+            engine.resize();
+        })
+        var scene = createScene();
+
+        var light = new BABYLON.HemisphericLight("HemiLight", new BABYLON.Vector3(0, 1, 0), scene);
+    </script>
+
 </body>
+
+</html>
