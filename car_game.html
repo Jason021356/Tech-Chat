@@ -17,6 +17,12 @@
         }
 
         #roadpicturepng {
+            animation: roadan2 1s ease-in 0s infinite normal;
+        }
+
+        @keyframes roadan2 {}
+
+        #roadpicturepng2 {
             height: 100%;
             animation: roadan 1s ease-in 0s infinite normal;
         }
@@ -25,7 +31,7 @@
             0% {
                 visibility: visible;
                 height: 100%;
-                top: 0;
+                top: -100%;
             }
 
             50% {
@@ -45,6 +51,7 @@
     <div id="road" style="overflow: hidden;">
         <div id="roadpicture">
             <img id="roadpicturepng" src=".\road.png" alt="roadpicturepng">
+            <img id="roadpicturepng2" src=".\road.png" alt="roadpicturepng">
         </div>
     </div>
 </body>
