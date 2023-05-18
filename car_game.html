@@ -16,22 +16,26 @@
             background-color: rgba(0, 0, 0, 0.0);
         }
 
-        #road div {
-            display: block;
-            width: 600px;
+        #roadpicturepng {
             height: 100%;
-            position: relative;
-            overflow: hidden;
-            animation: marquee 1s linear infinite;
+            animation: roadan 1s ease-in 0s infinite normal;
         }
 
-        @keyframes marquee {
-            from {
-                top: 0%;
+        @keyframes roadan {
+            0% {
+                visibility: visible;
+                height: 100%;
+                top: 0;
             }
 
-            to {
+            50% {
+                height: 100%;
+                top: 0;
+            }
+
+            100% {
                 top: 100%;
+                visibility: hidden;
             }
         }
     </style>
@@ -40,9 +44,7 @@
 <body>
     <div id="road" style="overflow: hidden;">
         <div id="roadpicture">
-            <div>
-                <img src=".\road.png" alt="roadpicturepng">
-            </div>
+            <img id="roadpicturepng" src=".\road.png" alt="roadpicturepng">
         </div>
     </div>
 </body>
