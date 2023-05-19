@@ -37,7 +37,9 @@
             color: white !important;
         }
 
-        #addfriendlink,#opinionlink,#settinglink {
+        #addfriendlink,
+        #opinionlink,
+        #settinglink {
             position: fixed;
         }
 
@@ -73,15 +75,25 @@
             height: 300px;
             border-radius: 50%;
         }
-        #btnfordiv{
+
+        #btnfordiv {
             position: absolute;
-            bottom: 0;
+            bottom: 60px;
             left: 0;
+            transition-duration: 0.3s;
+            transform: rotate(0deg);
         }
     </style>
 </head>
 
 <body>
+    <script>
+        function go() {
+            let btnfd = document.getElementById('btnfordiv');
+            btnfdtransform = btnfd.style.transform;
+            btnfd.style.transform = 'rotate(' + (btnfdtransform) + '180deg)';
+        }
+    </script>
     <div data-role="page" id="homepage">
         <div data-role="header" data-theme="b" data-position="fixed">
             <h1>Tech Chat</h1>
@@ -105,7 +117,7 @@
                     <li><a class="dropdown-item" href="">更多</a></li>
                 </ul>
             </div>
-            <a id="btnfordiv" data-role="button" data-icon="arrow-b" data-iconpos="notext" data-theme="b"></a>
+            <a id="btnfordiv" data-role="button" data-icon="carat-d" data-iconpos="notext" onclick="go()"></a>
         </div>
         <a id="addfriendlink" href=""><img id="addfriendpicture"
                 src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/add%20friend.png"></a>
