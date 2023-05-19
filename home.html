@@ -23,6 +23,7 @@
             height: 100px;
             position: fixed;
             left: 0;
+            top: 50px;
         }
 
         .dropdown {
@@ -83,6 +84,20 @@
             transition-duration: 0.3s;
             transform: rotate(0deg);
         }
+        #myico{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 50px;
+            left: 100px;
+            border-radius: 50%;
+        }
+        #username{
+            color: white;
+            position: relative;
+            top: -80px;
+            left: 350px;
+        }
     </style>
 </head>
 
@@ -99,6 +114,8 @@
             <h1>Tech Chat</h1>
         </div>
         <div data-role="content">
+            <img src="./myicon.png" id="myico">
+            <h1 id="username">你好，Jason021356</h1>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                 crossorigin="anonymous"></script>
