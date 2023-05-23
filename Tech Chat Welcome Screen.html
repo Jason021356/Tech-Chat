@@ -13,7 +13,7 @@
             position: absolute;
             top: 80%;
             left: 35%;
-            transition-duration: 0.5s;
+            transition-duration: 1.5s;
             color: black;
         }
 
@@ -22,16 +22,29 @@
             top: 20%;
             left: 40%;
         }
+
+        #imggo {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            color: black;
+            width: 300px;
+            height: 300px;
+            transition-duration: 1.5s;
+        }
     </style>
 </head>
 
 <body>
     <img src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.png" width="300px" height="300px">
-    <h3 id="ttcibtbti" onload="go">The Tech Chat is by the Black Technology Inc.</h3>
+    <h3 id="ttcibtbti" onload="go()">The Tech Chat is by the Black Technology Inc.</h3>
+    <div id="imggo" onload="go()"></div>
     <script>
         window.onload = function go() {
+            let iimmggggoo = document.getElementById("imggo");
             h3x = document.getElementById("ttcibtbti");
             h3x.style.color = "white";
+            iimmggggoo.style = "background:rgba(0,0,0,0.0)";
         }
         setTimeout("location.href='./Login.html'", 3000);
     </script>
