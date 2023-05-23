@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Tech Chat</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.ico"
+        type="image/x-icon">
     <style>
         @import url(background.css);
 
         h3 {
-            color: azure;
+            color: rgba(0, 0, 0, 0.0);
             position: absolute;
             top: 80%;
             left: 35%;
@@ -23,11 +25,12 @@
 </head>
 
 <body>
+    <script>
+        let h3x = document.querySelector('h3');
+        h3x.style.color = 'rgba(255, 255, 255, 1.0)';
+    </script>
     <img src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.png" width="300px" height="300px">
     <h3>The Tech Chat is by the Black Technology Inc.</h3>
-    <script>
-        setTimeout("location.href='./Login.html'", 3000);
-    </script>
 </body>
 
 </html>
