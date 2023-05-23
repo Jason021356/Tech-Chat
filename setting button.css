@@ -9,8 +9,7 @@
 #homepagerecommended,
 #chatroombackgroundsettings,
 #submit2,
-#sendresetphonenumber,
-#natbgf {
+#sendresetphonenumber {
     width: 98%;
     height: 30px;
     border-radius: 30px;
@@ -42,4 +41,23 @@
 #submit2:hover {
     color: #ffffff;
     background-color: green;
+}
+
+#natbgf {
+    position: relative;
+    width: 47%;
+    height: 30px;
+    left: 0;
+    border-bottom-left-radius: 30px;
+    transition-duration: 0.4s;
+}
+
+#natbgf2 {
+    position: relative;
+    width: 47%;
+    height: 30px;
+    top: -62px;
+    left: 50%;
+    border-bottom-right-radius: 30px;
+    transition-duration: 0.4s;
 }
