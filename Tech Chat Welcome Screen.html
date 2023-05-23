@@ -10,10 +10,11 @@
         @import url(background.css);
 
         h3 {
-            color: rgba(0, 0, 0, 0.0);
             position: absolute;
             top: 80%;
             left: 35%;
+            transition-duration: 0.5s;
+            color: black;
         }
 
         img {
@@ -25,12 +26,15 @@
 </head>
 
 <body>
-    <script>
-        let h3x = document.querySelector('h3');
-        h3x.style.color = 'rgba(255, 255, 255, 1.0)';
-    </script>
     <img src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.png" width="300px" height="300px">
-    <h3>The Tech Chat is by the Black Technology Inc.</h3>
+    <h3 id="ttcibtbti" onload="go">The Tech Chat is by the Black Technology Inc.</h3>
+    <script>
+        window.onload = function go() {
+            h3x = document.getElementById("ttcibtbti");
+            h3x.style.color = "white";
+        }
+        setTimeout("location.href='./Login.html'", 3000);
+    </script>
 </body>
 
 </html>
