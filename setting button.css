@@ -11,7 +11,8 @@
 #submit2,
 #sendresetphonenumber,
 #friendsset,
-#adset {
+#adset,
+#Techaiset {
     width: 98%;
     height: 30px;
     border-radius: 30px;
@@ -43,7 +44,8 @@
 #sendresetphonenumber:hover,
 #submit2:hover,
 #friendsset:hover,
-#adset:hover {
+#adset:hover,
+#Techaiset:hover {
     color: #ffffff;
     background-color: green;
 }
