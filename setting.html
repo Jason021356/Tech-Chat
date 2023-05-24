@@ -74,7 +74,7 @@
 
         #settingssearch {
             position: fixed;
-            top: 50px;
+            top: 45px;
             left: 100px;
             background-color: white;
             width: 150px;
@@ -84,6 +84,31 @@
             width: 100%;
             height: auto;
             border-radius: 10px !important;
+        }
+
+        #otherset {
+            position: relative;
+            top: 50px;
+            left: 20px;
+            color: white;
+        }
+
+        #friendsset {
+            position: relative;
+            top: 50px;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        #adset {
+            position: relative;
+            top: 50px;
         }
     </style>
 </head>
@@ -105,9 +130,12 @@
             <a id="picture" href="" data-role="button" data-transition="slideup">貼圖管理</a>
             <a id="homepagerecommended" href="" data-role="button" data-transition="slideup">主頁推薦項目</a>
             <a id="chatroombackgroundsettings" href="" data-role="button" data-transition="slideup">聊天室背景設定</a>
-            <a href="./home.html" data-ajax="false"><img
+            <h6 id="otherset">其他設定</h6>
+            <a id="friendsset" href="" data-role="button" data-transition="slideup">好友設定</a>
+            <a id="adset" href="" data-role="button" data-transition="slideup">廣告設定</a>
+            <a href="./home.html" data-ajax="false"><img id="techchaticon"
                     src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.png"
-                    alt="Tech Chat icon" style="width: 100px;height: 100px;position: fixed;top: 50px;left: 0;"></a>
+                    alt="Tech Chat icon" style="width: 100px;height: 100px;position: fixed;top: 40px;left: 0;"></a>
             <input type="text" name="settingssearch" id="settingssearch" placeholder="搜尋設定項目...">
         </div>
     </div>

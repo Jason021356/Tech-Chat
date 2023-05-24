@@ -9,7 +9,9 @@
 #homepagerecommended,
 #chatroombackgroundsettings,
 #submit2,
-#sendresetphonenumber {
+#sendresetphonenumber,
+#friendsset,
+#adset {
     width: 98%;
     height: 30px;
     border-radius: 30px;
@@ -39,7 +41,9 @@
 }
 
 #sendresetphonenumber:hover,
-#submit2:hover {
+#submit2:hover,
+#friendsset:hover,
+#adset:hover {
     color: #ffffff;
     background-color: green;
 }
@@ -66,4 +70,8 @@
     left: 50%;
     border-bottom-right-radius: 30px;
     transition-duration: 0.4s;
+}
+
+#techchaticon {
+    border-radius: 20px;
 }
