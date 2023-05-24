@@ -17,13 +17,10 @@
             const canvas = document.querySelector("#glCanvas");
             const gl = canvas.getContext("webgl");
 
-            if (gl == null) {
+            if (!gl) {
                 alert("無法進行初始化");
                 return;
             }
-
-            gl.clearColor(0.0, 0.0, 0.0, 1.0);
-            gl.clear(gl.COLOR_BUFFER_BIT);
 
             const vsSource = `
                 attribute vec4 aVertexPosition;
@@ -40,6 +37,21 @@
                     gl_FragColor = vec4(1.0,1.0,1.0,1.0);
                 }
             `;
+            const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+
+            const programInfo = {
+                program: shaderProgram,
+                attribLocations: {
+                    vertexPosition: gl.getAttribLocation(shaderProgram,
+                        "aVertexPosition"),
+                },
+                uniformLocations: {
+                    projectionMatrix: gl.getUniformLocation(shaderProgram,
+                        "uProfectionMatrix"),
+                    modelViewMatrix: gl.getUniformLocation(shaderProgram,
+                        "uModelViewMatrix"),
+                },
+            };
             function initShaderProgram() {
                 const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource);
                 const fragmentShader = loadShader(gl, gl.FRAGMENT_SHADER, fsSource);
@@ -67,20 +79,6 @@
                 }
                 return shader;
             }
-            const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
-            const programInfo = {
-                program: shaderProgram,
-                attribLocations: {
-                    vertexPosition: gl.getAttribLocation(shaderProgram,
-                        "aVertexPosition"),
-                },
-                uniformLocations: {
-                    projectionMatrix: gl.getUniformLocation(shaderProgram,
-                        "uProfectionMatrix"),
-                    modelViewMatrix: gl.getUniformLocation(shaderProgram,
-                        "uModelViewMatrix"),
-                },
-            };
             function initBuffers(gl) {
                 const positionBuffer = gl.createBuffer();
                 gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
