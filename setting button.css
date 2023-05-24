@@ -19,7 +19,8 @@
 #accountset:hover,
 #personaldata:hover,
 #privacyset:hover,
-#techdrive:hover {
+#techdrive:hover,
+#natbgf:hover {
     color: white;
     background-color: red;
 }
@@ -41,6 +42,11 @@
 #submit2:hover {
     color: #ffffff;
     background-color: green;
+}
+
+#natbgf2:hover {
+    color: #ffffff;
+    background-color: blue;
 }
 
 #natbgf {
