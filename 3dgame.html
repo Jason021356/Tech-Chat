@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Tech Chat</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.ico"
+        type="image/x-icon">
 </head>
 
 <body>
@@ -66,6 +68,38 @@
                 return shader;
             }
             const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+            const programInfo = {
+                program: shaderProgram,
+                attribLocations: {
+                    vertexPosition: gl.getAttribLocation(shaderProgram,
+                        "aVertexPosition"),
+                },
+                uniformLocations: {
+                    projectionMatrix: gl.getUniformLocation(shaderProgram,
+                        "uProfectionMatrix"),
+                    modelViewMatrix: gl.getUniformLocation(shaderProgram,
+                        "uModelViewMatrix"),
+                },
+            };
+            function initBuffers(gl) {
+                const positionBuffer = gl.createBuffer();
+                gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+                const positions = [1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, -1.0];
+                gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions),
+                    gl.STATIC_DRAW);
+
+                return {
+                    position: positionBuffer,
+                };
+            }
+            function drawScene(gl, programInfo, buffers) {
+                gl.clearColor(0.0, 0.0, 0.0, 1.0);
+                gl.clearDepth(1.0);
+                gl.enable(gl.DEPTH_TEST);
+                gl.depthFunc(gl.LEQUAL);
+                gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+            }
         }
 
     </script>
