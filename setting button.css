@@ -75,5 +75,10 @@
 }
 
 #techchaticon {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 40px;
+    left: 0;
     border-radius: 20px;
 }
