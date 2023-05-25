@@ -12,7 +12,8 @@
 #sendresetphonenumber,
 #friendsset,
 #adset,
-#Techaiset {
+#Techaiset,
+#sendzippendselect {
     width: 98%;
     height: 30px;
     border-radius: 30px;
@@ -45,7 +46,8 @@
 #submit2:hover,
 #friendsset:hover,
 #adset:hover,
-#Techaiset:hover {
+#Techaiset:hover,
+#sendzippendselect:hover {
     color: #ffffff;
     background-color: green;
 }
@@ -81,4 +83,10 @@
     top: 40px;
     left: 0;
     border-radius: 20px;
+}
+
+select {
+    color: white;
+    background-color: black;
+    position: relative;
 }

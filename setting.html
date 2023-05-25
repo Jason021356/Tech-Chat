@@ -75,6 +75,10 @@
         body::-webkit-scrollbar {
             display: none;
         }
+
+        h3 {
+            color: white;
+        }
     </style>
 </head>
 
@@ -108,13 +112,25 @@
     </div>
     <div data-role="page" id="techdrivepage">
         <div data-role="header" data-theme="b">
-            <a href="#settingpage" data-role="button" data-theme="b" data-icon="arrow-l" data-ajax="false">Back</a>
+            <a href="#settingpage" data-role="button" data-theme="b" data-icon="arrow-l"
+                data-transition="slidedown">Back</a>
             <h1>Tech Chat</h1>
         </div>
         <div data-role="content">
             <h1 style="position: relative;left: 100px;">管理Tech Drive儲存空間</h1>
+            <form action="" method="post">
+                <select name="zippendselect" id="zippendselect">
+                    <option value="100MBzippend">大於100MB進行壓縮</option>
+                    <option value="200MBzippend">大於200MB進行壓縮</option>
+                    <option value="500MBzippend">大於500MB進行壓縮</option>
+                    <option value="1GBzippend">大於1GB進行壓縮</option>
+                </select>
+                <a id="sendzippendselect" href="" data-role="button">Go</a>
+            </form>
+            <h3>上傳檔案或資料夾?<a href="" style="color: blue;">你的Tech Drive</a></h3>
+            <h3>儲存空間已用盡?<a href="" style="color: blue;">立刻購買更多儲存空間</a>或<a href="" st></a></h3>
             <img src="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.png" alt="Tech Chat"
-                id="techchaticon">
+                id="techchaticon" style="top: 50px;">
         </div>
     </div>
     <div data-role="page" id="accountsetpage">
