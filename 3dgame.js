@@ -2,7 +2,7 @@ main();
 
 function main() {
     const canvas = document.querySelector("#glCanvas");
-    const gl = canvas.getContext("webgl");
+    const gl = canvas.getContext('webgl');
 
     if (!gl) {
         alert("無法進行初始化");
@@ -63,7 +63,7 @@ function drawScene(gl, programInfo, buffers) {
     const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
     const zNear = 0.1;
     const zFar = 100.0;
-    const ProfectionMatrix = mat4.create();
+    const projectionMatrix = mat4.create();
 
     mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
 
@@ -102,7 +102,7 @@ function drawScene(gl, programInfo, buffers) {
         projectionMatrix
     );
     gl.uniformMatrix4fv(
-        programInfo, uniformLocations, modelViewMatrix,
+        programInfo.uniformLocations.modelViewMatrix,
         false,
         modelViewMatrix
     );
@@ -110,10 +110,10 @@ function drawScene(gl, programInfo, buffers) {
     {
         const offset = 0;
         const vertexCount = 4;
-        gl.drawArrays(gl, TRIANGLE_STRIP, offset, vertexCount);
+        gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertexCount);
     }
 }
-function initShaderProgram() {
+function initShaderProgram(gl, vsSource, fsSource) {
     const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource);
     const fragmentShader = loadShader(gl, gl.FRAGMENT_SHADER, fsSource);
 
