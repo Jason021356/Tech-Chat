@@ -13,7 +13,8 @@
 #friendsset,
 #adset,
 #Techaiset,
-#sendzippendselect {
+#sendzippendselect,
+#otherdevice {
     width: 98%;
     height: 30px;
     border-radius: 30px;
@@ -47,7 +48,8 @@
 #friendsset:hover,
 #adset:hover,
 #Techaiset:hover,
-#sendzippendselect:hover {
+#sendzippendselect:hover,
+#otherdevice:hover {
     color: #ffffff;
     background-color: green;
 }
