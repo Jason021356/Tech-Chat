@@ -122,10 +122,10 @@
         }
 
         #password_block {
-            width: 110px;
-            height: 20px;
+            width: 40px;
+            height: 30px;
             position: absolute;
-            top: 42%;
+            top: 41%;
             left: 52%;
             background-color: white;
             color: black;
@@ -139,16 +139,29 @@
             color: white;
             background-color: green;
         }
+
+        #passwordeyes {
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.0);
+            position: relative;
+            top: -2px;
+            left: -3px;
+        }
     </style>
     <script>
         function ok() {
             let pass = document.getElementById("passwordsetinput");
             let word = pass.getAttribute('type');
+            let pey = document.getElementById("passwordeyes")
+            let peyg = pey.getAttribute('src');
             console.log(word);
             if (word == 'password') {
                 pass.setAttribute('type', 'text');
+                peyg.setAttribute('src', 'password eyes.png')
             } else {
                 pass.setAttribute('type', 'password');
+                peyg.setAttribute('src', 'password eyes2.png')
             }
         }
     </script>
@@ -171,7 +184,7 @@
             <input type="reset" value="Reset"
                 style="background-color: red;border-radius: 10px;border-color: chartreuse;color: white;"></span>
     </form>
-    <button id="password_block" onclick="ok()">密碼顯示與隱藏</button>
+    <button id="password_block" onclick="ok()"><img id="passwordeyes" src="password eyes.png"></button>
     <h3 id="Loginweb">已經有帳號了嗎?<a style="background-color: rgba(0, 0, 0, 0.0);color: deepskyblue;"
             href="Login.html">登入</a></h3>
 </body>
