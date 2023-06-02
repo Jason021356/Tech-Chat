@@ -14,7 +14,8 @@
 #adset,
 #Techaiset,
 #sendzippendselect,
-#otherdevice {
+#otherdevice,
+#moveaccount {
     width: 98%;
     height: 30px;
     border-radius: 30px;
@@ -25,7 +26,8 @@
 #personaldata:hover,
 #privacyset:hover,
 #techdrive:hover,
-#natbgf:hover {
+#natbgf:hover,
+#moveaccount:hover {
     color: white;
     background-color: red;
 }
