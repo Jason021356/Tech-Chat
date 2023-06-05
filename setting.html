@@ -94,6 +94,17 @@
 </head>
 
 <body>
+    <script>
+        function passtotot() {
+            let pass = document.getElementById("passwordsetop");
+            let word = pass.getAttribute('type');
+            if (word == 'password') {
+                pass.setAttribute('type', 'text');
+            } else {
+                pass.setAttribute('type', 'password');
+            }
+        }
+    </script>
     <div data-role="page" id="settingpage">
         <div data-role="header" data-theme="b" data-position="fixed">
             <a href="./home.html" data-role="button" data-theme="b" data-icon="arrow-l" data-ajax="false">Back</a>
@@ -198,7 +209,8 @@
             <h1>密碼重設</h1><br />
             <form action="" method="post">
                 <label for="passwordsetop" style="color: white;">Old password</label><input id="passwordsetop"
-                    name="passwordsetop" type="password" placeholder="Old passowrd"><button id="">顯示</button>
+                    name="passwordsetop" type="password" placeholder="Old passowrd"><button id="passwordtpt"
+                    onclick="passtotot()">顯示</button>
                 <label for="passwordsetnp" style="color: white;">New password</label><input type="password"
                     name="passwordsetnp" id="passwordsetnp" placeholder="New password">
                 <label for="passwordsetcnp" style="color: white;">Confirm new password</label><input type="password"
