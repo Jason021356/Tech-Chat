@@ -104,13 +104,13 @@
                 pass.setAttribute('type', 'password');
             }
         }
-        function passtnpnp(){
+        function passtnpnp() {
             let passn = document.getElementById("passwordsetnp");
             let wordn = document.getAttribute('type');
-            if(wordn == 'password'){
-                passn.setAttribute('type','text');
-            }else{
-                passn.setAttribute('type','password');
+            if (word == 'password') {
+                passn.setAttribute('type', 'text');
+            } else {
+                passn.setAttribute('type', 'password');
             }
         }
     </script>
@@ -221,7 +221,8 @@
                     name="passwordsetop" type="password" placeholder="Old passowrd"><button id="passwordtpt"
                     onclick="passtotot()">顯示</button>
                 <label for="passwordsetnp" style="color: white;">New password</label><input type="password"
-                    name="passwordsetnp" id="passwordsetnp" placeholder="New password"><button id="passwordtpt" onclick="passtnpnp">顯示密碼</button>
+                    name="passwordsetnp" id="passwordsetnp" placeholder="New password"><button id="passwordtpt"
+                    onclick="passtnpnp">顯示密碼</button>
                 <label for="passwordsetcnp" style="color: white;">Confirm new password</label><input type="password"
                     name="passwordsetcnp" id="passwordsetcnp" placeholder="Confirm new password">
                 <a id="submit2" href="" data-role="button">Send</a>
