@@ -6,8 +6,19 @@
     <title>Login</title>
     <link rel="icon" href="https://raw.githubusercontent.com/Jason021356/Tech-Chat/main/tech_chat.ico"
         type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv=Pragma content=no-cache>
+    <meta http-equiv=Cache-Control content=no-cache>
+    <meta http-equiv=Expires content=0>
     <style>
         @import url(background.css);
+
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+        }
 
         body::-webkit-scrollbar {
             display: none;
@@ -231,6 +242,26 @@
             } else {
                 pass.setAttribute('type', 'password');
             }
+        }
+        window.onload = function () {
+            document.onkeydown = function () {
+                var e = window.event || arguments[0];
+                if (e.keyCode == 123) {
+                    alert("錯誤!此網頁無法執行您的操作!");
+                    return false;
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+                    alert("錯誤!此網頁無法執行您的操作!");
+                    return false;
+                }
+            }
+        }
+        function stop() {
+            alert("錯誤!此網頁無法執行您的操作!");
+            return false;
+        }
+        document.oncontextmenu = stop;
+        document.body.oncopy = function () {
+            event.returnValue = false;
         }
     </script>
 </head>
